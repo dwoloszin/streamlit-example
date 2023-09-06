@@ -8,6 +8,9 @@ import io
 import nltk
 import requests
 from urllib.parse import quote
+import gettext
+_ = gettext.gettext
+
 
 nltk.download('punkt')
 
@@ -18,6 +21,19 @@ languages = ['en', 'pt', 'fr']
 
 # Create a dropdown to select the language
 selected_language = st.selectbox('Select Language', languages)
+
+
+#language = st.sidebar.selectbox('', ['en', 'pl', 'de'])
+try:
+  localizator = gettext.translation('base', localedir='locales', languages=[selected_language])
+  localizator.install()
+  _ = localizator.gettext 
+except:
+    pass
+
+
+
+
 
 def user_Location():
     try:
