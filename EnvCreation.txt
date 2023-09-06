@@ -1,0 +1,9 @@
+C:\Users\f8059678\AppData\Local\Programs\Python\Python311\python.exe -m venv myenv
+
+myenv\Scripts\activate
+
+pip install -r requirements.txt
+
+streamlit run streamlit_app.py
+
+deactivate

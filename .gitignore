@@ -1,4 +1,4 @@
-/credentials/
-/.venv/
-/external-lib/
+/credentials
+/external-lib
+/myenv
 
