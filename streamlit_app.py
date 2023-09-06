@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
-from bs4 import BeautifulSoup as soup
+#from bs4 import BeautifulSoup as soup
+from bs4 import BeautifulSoup
 from urllib.request import urlopen
 from newspaper import Article
 import io
@@ -38,7 +39,7 @@ def fetch_news_search_topic(topic, language='en', user_location=None):
     op = urlopen(site)  # Open that site
     rd = op.read()  # read data from site
     op.close()  # close the object
-    sp_page = soup(rd, 'xml')  # scraping data from site
+    sp_page = BeautifulSoup(rd, 'xml')  # scraping data from site
     news_list = sp_page.find_all('item')  # finding news
     return news_list
 
@@ -51,7 +52,7 @@ def fetch_top_news(language='en', user_location=None):
     op = urlopen(site)  # Open that site
     rd = op.read()  # read data from site
     op.close()  # close the object
-    sp_page = soup(rd, 'xml')  # scraping data from site
+    sp_page = BeautifulSoup(rd, 'xml')  # scraping data from site
     news_list = sp_page.find_all('item')  # finding news
     return news_list
 
@@ -63,7 +64,7 @@ def fetch_category_news(topic, language='en', user_location=None):
     op = urlopen(site)  # Open that site
     rd = op.read()  # read data from site
     op.close()  # close the object
-    sp_page = soup(rd, 'xml')  # scraping data from site
+    sp_page = BeautifulSoup(rd, 'xml')  # scraping data from site
     news_list = sp_page.find_all('item')  # finding news
     return news_list
 
