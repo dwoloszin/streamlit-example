@@ -2,6 +2,7 @@ Pillow
 newspaper3k
 urllib3
 streamlit
-beautifulsoup4
+beautifulsoup4==4.9.0
 protobuf==3.20.0
 jinja2>=3.0
+
