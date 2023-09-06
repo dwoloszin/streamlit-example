@@ -11,7 +11,7 @@ from urllib.parse import quote
 
 nltk.download('punkt')
 
-st.set_page_config(page_title='InNews🇮🇳: A Summarised News📰 Portal', page_icon='./Meta/newspaper.ico')
+st.set_page_config(page_title='InNews: A Summarised News📰 Portal', page_icon='./Meta/newspaper.ico')
 
 # Define a list of supported languages
 languages = ['en', 'pt', 'fr']
@@ -106,7 +106,7 @@ def display_news(list_of_news, news_quantity):
 
 
 def run():
-    st.title("InNews🇮🇳: A Summarised News📰")
+    st.title("InNews: A Summarised News📰")
     image = Image.open('./Meta/newspaper.png')
 
     col1, col2, col3 = st.columns([3, 5, 3])
